@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Document</title>
+    <link href="boarding180.png" rel="apple-touch-icon-precomposed">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            /* font-family: 'Inter', sans-serif; */
+        }
+        /* body{
+            width: 100%;
+            height: 100%;
+            background-color: gray;
+        } */
+        body{
+            /* max-width: 828px;
+            max-height: 1792px; */
+            /* width: 828px;
+            height: 1792px; */
+            width: 100vw;
+            height: 100vh;
+            /* background-image: url("https://picsum.photos/828/1792?random=14"); */
+            /* background-image: url("burger.JPG"); */
+            background-color: rgb(220, 22, 23);
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* display: flex; */
+            position: relative;
+            top: 0;
+            left: 0;
+
+        }
+        .pic{
+            width: 600px;
+            height: 350px;
+            background-color: rgb(221, 221, 221);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            /* display: flex; */
+            text-align: center;
+            border-radius: 30px;
+        }
+        .btn{
+            width: 100vw;
+            height: 150px;
+            background-color: #fda72f;
+            /* background-color: #faf; */
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            font-family: 'Inter';
+            /* opacity: 50%; */
+        }
+        .btn p{
+            font-size: 40px;
+        }
+        img{
+            width: 100%;
+        }
+
+        h2{
+            font-size: 40px;
+            padding: 20px 0 0 0;
+        }
+        p{
+            padding: 10px 20px 0 ;
+            left: 0%;
+            font-size: 30px;
+        }
+        .text2{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 20px;
+            left: 50px;
+        }
+        .text2 p{
+            font-size: 40px;
+            color: cornflowerblue;
+        }
+        .line{
+            padding: 80px 0 0 0;
+            border-bottom:  solid rgb(66, 66, 66) 1px;
+        }
+        .straight{
+            border-right: solid white 10px;
+            /* position: relative; */
+            width: 290px;
+            height: 100px;
+            /* background-color: #fff; */
+            border-right: rgb(87, 87, 87) 1px solid; 
+            
+        }
+        #p1{
+            /* border-right: rgb(87, 87, 87) solid 1px; */
+            font-weight: bold;
+        }
+        /* .display{
+            display: none;
+        } */
+        #pic{
+            display: none;
+        }
+        #p3{
+            color: white;
+            font-size: 50px;
+        }
+        #clock{
+            display: none;
+            position: absolute;
+            width: 73px;
+            height: 81px;
+            left: 260px;
+            bottom: 65px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <img src="fish2.jpg" alt="">
+    <div id="pic" class="pic">
+        <h2>確認兌換優惠</h2>
+        <div class="text">
+            <p>請確認您已在麥當勞櫃檯，點選「立即兌換」後，需於兩分鐘內出示給結帳人員</p>
+        </div>
+        <div class="line"></div>
+        <div class="straight"></div>
+        <div id="text2" class="text2">
+            <p id="p1">暫不兌換  &nbsp &nbsp </p>
+            <p id="p2">&nbsp &nbsp &nbsp立即兌換</p>
+        </div>
+        
+        <!-- <img src="https://picsum.photos/828/1792?random=12" alt=""> -->
+        <!-- <img src="burger.JPG" alt=""> -->
+    </div>
+    <div id="btn" class="btn">
+        <!-- <img src="clock.png" alt=""> -->
+        <p id="p3">兌換優惠</p>
+    </div>
+    <img id="clock" src="clock.png" alt="">
+    <script>
+        // document.ontouchmove= function(e){
+        //     e.preventDefault();
+        // }
+        var mo=function(e){e.preventDefault();};
+function stop(){
+        document.body.style.overflow='hidden';       
+        document.addEventListener("touchmove",mo,{passive:false});//禁止页面滑动
+}
+//直接默认不让滑动
+stop();
+
+var btn = document.getElementById('btn');
+var pic = document.getElementById('pic');
+var text2 = document.getElementById('text2');
+var p2 =document.getElementById('p2');
+var clock = document.getElementById('clock');
+
+    btn.onclick = showYou;
+    function showYou(){
+        pic.style.display='block';
+    }
+
+    p2.onclick = showCountDown;
+    function showCountDown(){
+        pic.style.display='none';
+        var AAA = setInterval(function(){ 
+        btn.style.height = '220px';
+        // btn.style.fontFamily= 'Inter';
+        btn.innerHTML = "<font size= 10px color=white> 優惠倒數 1:" + (time = time-1);
+        clock.style.display='block';
+        // console.log(time = time - 1);
+        }, 1000);
+    
+        // btn.innerHTML = "<font size = 30px>  優惠倒數 1:  </font>" + AAA;
+    }
+
+
+
+    var time = 60;
+
+
+
+    
+
+    </script>
+</body>
+</html>
