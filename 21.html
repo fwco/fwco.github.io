@@ -31,7 +31,7 @@
             height: 100vh;
             /* background-image: url("https://picsum.photos/828/1792?random=14"); */
             /* background-image: url("burger.JPG"); */
-            /* background-color: rgb(255, 182, 66); */
+            background-color: #f5c257;
             
             background-repeat: no-repeat;
             background-size: cover;
@@ -142,12 +142,22 @@
             left: 270px;
             bottom: 65px;
         }
+        #pleasecount{
+            position: absolute;
+            width: 500px;
+            height: 40px;
+            left: 20%;
+            top: 30%;
+            background-color: #f9f;
+            color: black;
+        }
+
         #count{
             position: absolute;
             width: 200px;
             height: 40px;
             right: 40%;
-            top: 48%;
+            top: 45%;
             background-color: green;
         }
 
@@ -171,6 +181,9 @@
 
         <!-- <img src="https://picsum.photos/828/1792?random=12" alt=""> -->
         <!-- <img src="burger.JPG" alt=""> -->
+    </div>
+    <div id="pleasecount" class="pleasecount">
+        <p>YYY</p>
     </div>
 
     <div id="count" class="count">
@@ -204,6 +217,7 @@ var clock = document.getElementById('clock');
 var bake1 = document.getElementById('bake1');
 var time = 60;
 var count = document.getElementById('count');
+var pleasecount = document.getElementById('pleasecount');
 
     btn.onclick = showYou;
     function showYou(){
@@ -225,6 +239,8 @@ var count = document.getElementById('count');
         // btn.style.height = '220px';
         btn.style.fontFamily= 'Inter';
         count.innerHTML = "<font size= 5px color=white>  使用期限倒數 1:" + (time = time-1);
+        pleasecount.innerHTML = "<font size= 5px color=black>  請於倒數 1:" + (time = time-1) + "內出示給櫃檯人員進行兌換";
+
         // btn.innerHTML = "background-color=white";
         // clock.style.display='block';
         // console.log(time = time - 1);
