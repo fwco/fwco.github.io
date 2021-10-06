@@ -31,7 +31,7 @@
             height: 100vh;
             /* background-image: url("https://picsum.photos/828/1792?random=14"); */
             /* background-image: url("burger.JPG"); */
-            background-color: rgb(246, 193, 88);
+            /* background-color: rgb(246, 193, 88); */
             
             background-repeat: no-repeat;
             background-size: cover;
@@ -168,7 +168,7 @@
             height: 20px;
             left: 0;
             top: 0;
-            background-color: rgb(252, 189, 53);
+            background-color: rgb(255, 192, 56);
             /* background-color: red; */
 
         }
@@ -180,8 +180,10 @@
     <img id="bake1" src="new_bake.PNG" alt="">
     <img id="bake2" src="new_bake2.PNG" alt="">
     <div id="pic" class="pic">
+        <p>&nbsp</p>
         <h2>確定兌換此優惠券？</h2>
         <div class="text">
+            <!-- <p> &nbsp </p> -->
             <p>請確認已在麥當勞櫃檯，點選「確定兌換」後需要在２分鐘內出示給櫃檯人員。</p>
         </div>
         <div class="line"></div>
@@ -255,7 +257,7 @@ var pleasecount = document.getElementById('pleasecount');
         pleasecount.style.fontFamily= 'Inter';
 
         var TTT = time - 1
-        count.innerHTML = "<font size= 6px color=red>  使用期限倒數 1:" + (time = TTT);
+        count.innerHTML = "<font size= 6px color=red>  &nbsp 使用期限倒數 1:" + (time = TTT);
         pleasecount.innerHTML = "<font size= 6px color=black>  請於倒數 1:" + (time = TTT) + "內出示給櫃檯人員進行兌換";
 
         // btn.innerHTML = "background-color=white";
