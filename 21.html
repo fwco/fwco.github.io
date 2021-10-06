@@ -142,6 +142,14 @@
             left: 270px;
             bottom: 65px;
         }
+        #count{
+            position: absolute;
+            width: 200px;
+            height: 40px;
+            right: 40%;
+            top: 48%;
+            background-color: green;
+        }
 
 
     </style>
@@ -164,10 +172,17 @@
         <!-- <img src="https://picsum.photos/828/1792?random=12" alt=""> -->
         <!-- <img src="burger.JPG" alt=""> -->
     </div>
+
+    <div id="count" class="count">
+        <p>aaa</p>
+
+    </div>
+    
     <div id="btn" class="btn">
         <!-- <img src="clock.png" alt=""> -->
         <!-- <p id="p3">兌換優惠</p> -->
     </div>
+    
     <img id="clock" src="clock.png" alt="">
     <script>
         // document.ontouchmove= function(e){
@@ -188,6 +203,7 @@ var p2 = document.getElementById('p2');
 var clock = document.getElementById('clock');
 var bake1 = document.getElementById('bake1');
 var time = 60;
+var count = document.getElementById('count');
 
     btn.onclick = showYou;
     function showYou(){
@@ -208,7 +224,8 @@ var time = 60;
         var AAA = setInterval(function(){ 
         // btn.style.height = '220px';
         btn.style.fontFamily= 'Inter';
-        btn.innerHTML = "<font size= 5px color=white>  使用期限倒數 1:" + (time = time-1);
+        count.innerHTML = "<font size= 5px color=white>  使用期限倒數 1:" + (time = time-1);
+        // btn.innerHTML = "background-color=white";
         // clock.style.display='block';
         // console.log(time = time - 1);
         }, 1000);
