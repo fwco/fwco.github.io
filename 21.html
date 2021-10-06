@@ -146,8 +146,8 @@
             position: absolute;
             width: 500px;
             height: 40px;
-            left: 20%;
-            top: 30%;
+            left: 30%;
+            top: 35%;
             background-color: #f9f;
             color: black;
         }
@@ -157,7 +157,7 @@
             width: 200px;
             height: 40px;
             right: 40%;
-            top: 45%;
+            top: 40%;
             background-color: green;
         }
 
@@ -249,8 +249,12 @@ var pleasecount = document.getElementById('pleasecount');
         var AAA = setInterval(function(){ 
         // btn.style.height = '220px';
         btn.style.fontFamily= 'Inter';
-        count.innerHTML = "<font size= 5px color=white>  使用期限倒數 1:" + (time = time-1);
-        pleasecount.innerHTML = "<font size= 5px color=black>  請於倒數 1:" + (time = time-1) + "內出示給櫃檯人員進行兌換";
+        count.style.fontFamily= 'Inter';
+        pleasecount.style.fontFamily= 'Inter';
+
+        var TTT = time - 1
+        count.innerHTML = "<font size= 5px color=white>  使用期限倒數 1:" + (time = TTT);
+        pleasecount.innerHTML = "<font size= 5px color=black>  請於倒數 1:" + (time = TTT) + "內出示給櫃檯人員進行兌換";
 
         // btn.innerHTML = "background-color=white";
         // clock.style.display='block';
