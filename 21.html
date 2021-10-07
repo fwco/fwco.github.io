@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js"></script>
+    <script>
+$(document).ready(function(){
+//   $("button").click(function(){
+//     $("#div3").fadeIn();});
+    $("#p2").click(function () {
+        $("#fries").fadeIn();
+        $("#fries").fadeOut();
+    })
+});
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -173,22 +184,33 @@
 
         }
         .fries{
-            width: 300px;
-            height: 300px;
+            /* width: 300px;
+            height: 300px; */
             display: none;
             position: absolute;
-            left: 35%;
-            top: 35%;
+            /* left: 35%;
+            top: 35%; */
+            left: 0;
+            top: 0;
             /* z-index: 100; */
             /* background-color: #faa; */
             /* opacity: 0.95; */
+            -webkit-transition:all 0.5s linear;
+            -moz-transition:all 0.5s linear;
+            -ms-transition:all 0.5s linear;
+            -o-transition:all 0.5s linear;
+            transition:all 0.5s linear;
 
         }
 
     </style>
 </head>
 <body>
-    <div id="fires" class="fries">
+    <!-- <p>jojoj</p>
+    <button id=butt>ppppp</button> -->
+
+    <div id="div3" style="width: 80px; height: 80px; display: none; background-color: #faf;"></div>
+    <div id="fries" class="fries">
     <img src="fries5.png"   alt="">
 
     </div>
@@ -270,7 +292,7 @@ var fries = document.getElementById('fires');
     function showCountDown(){
         bake1.style.display='none';
         pic.style.display='none';
-        fries.style.display='flex';
+        // fries.style.display='flex';
         var AAA = setInterval(function(){
         // btn.style.height = '220px';
         btn.style.fontFamily= 'Inter';
