@@ -32,7 +32,7 @@
             /* background-image: url("https://picsum.photos/828/1792?random=14"); */
             /* background-image: url("burger.JPG"); */
             background-color: rgb(255, 192, 56);
-            
+
             background-repeat: no-repeat;
             background-size: cover;
             /* display: flex; */
@@ -110,8 +110,8 @@
             width: 295px;
             height: 90px;
             /* background-color: #fff; */
-            border-right: rgb(87, 87, 87) 1px solid; 
-            
+            border-right: rgb(87, 87, 87) 1px solid;
+
         }
         #p1{
             /* border-right: rgb(87, 87, 87) solid 1px; */
@@ -172,13 +172,32 @@
             /* background-color: red; */
 
         }
+        .fries{
+            width: 150px;
+            height: 150px;
+            display: none;
+            position: absolute;
+            left: 32%;
+            top: 40%;
+            /* z-index: 100; */
+            /* background-color: #faa; */
+            opacity: 0.95;
+
+        }
 
     </style>
 </head>
 <body>
+    <div id="fires" class="fries">
+    <img src="fries5.png"   alt="">
+
+    </div>
+
     <div id="yellow" class="yellow"></div>
     <img id="bake1" src="new_bake.PNG" alt="">
     <img id="bake2" src="new_bake2.PNG" alt="">
+    <!-- <img id="fires" src="fries2.PNG" alt=""> -->
+
     <div id="pic" class="pic">
         <p>&nbsp</p>
         <h2>確定兌換此優惠券？</h2>
@@ -204,12 +223,12 @@
         <!-- <p>aaa</p> -->
 
     </div>
-    
+
     <div id="btn" class="btn">
         <!-- <img src="clock.png" alt=""> -->
         <!-- <p id="p3">兌換優惠</p> -->
     </div>
-    
+
     <img id="clock" src="clock.png" alt="">
     <script>
         // document.ontouchmove= function(e){
@@ -217,7 +236,7 @@
         // }
         var mo=function(e){e.preventDefault();};
 function stop(){
-        document.body.style.overflow='hidden';       
+        document.body.style.overflow='hidden';
         document.addEventListener("touchmove",mo,{passive:false});//禁止页面滑动
 }
 //直接默认不让滑动
@@ -232,6 +251,7 @@ var bake1 = document.getElementById('bake1');
 var time = 60;
 var count = document.getElementById('count');
 var pleasecount = document.getElementById('pleasecount');
+var fries = document.getElementById('fires');
 
     btn.onclick = showYou;
     function showYou(){
@@ -250,7 +270,8 @@ var pleasecount = document.getElementById('pleasecount');
     function showCountDown(){
         bake1.style.display='none';
         pic.style.display='none';
-        var AAA = setInterval(function(){ 
+        fries.style.display='flex';
+        var AAA = setInterval(function(){
         // btn.style.height = '220px';
         btn.style.fontFamily= 'Inter';
         count.style.fontFamily= 'Inter';
@@ -259,22 +280,22 @@ var pleasecount = document.getElementById('pleasecount');
         var TTT = time - 1
         count.innerHTML = "<font size= 6px color=red>  &nbsp 使用期限倒數 1:" + (time = TTT);
         pleasecount.innerHTML = "<font size= 6px color=black>  請於倒數 1:" + (time = TTT) + "內出示給櫃檯人員進行兌換";
-
+        fries.style.display='none';
         // btn.innerHTML = "background-color=white";
         // clock.style.display='block';
         // console.log(time = time - 1);
         }, 1000);
-    
+
         // btn.innerHTML = "<font size = 30px>  優惠倒數 1:  </font>" + AAA;
     }
 
 
 
-   
 
 
 
-    
+
+
 
     </script>
 </body>
