@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js"></script>
+    <script>
+$(document).ready(function(){
+//   $("button").click(function(){
+//     $("#div3").fadeIn();});
+    $("#p2").click(function () {
+        $("#fries").fadeIn();
+        $("#fries").fadeOut();
+        // $("body").css("background-image","url(fries5.png)");
+        // $("body").fadeIn;
+        // $("body").fadeOut;
+        // $("body").css("background-color","rgb(255,192,56");
+    })
+});
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Document</title>
+    <!-- <link href="180.png" rel="apple-touch-icon-precomposed"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            /* font-family: 'Inter', sans-serif; */
+        }
+        /* body{
+            width: 100%;
+            height: 100%;
+            background-color: gray;
+        } */
+        body{
+            /* max-width: 828px;
+            max-height: 1792px; */
+            /* width: 828px;
+            height: 1792px; */
+            width: 100vw;
+            height: 100vh;
+            /* background-image: url("https://picsum.photos/828/1792?random=14"); */
+            /* background-image: url("burger.JPG"); */
+            background-color: rgb(255, 192, 56);
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* display: flex; */
+            position: relative;
+            top: 0;
+            left: 0;
+
+        }
+        .pic{
+            width: 600px;
+            height: 350px;
+            background-color: rgb(240, 240, 240);
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            /* display: flex; */
+            text-align: center;
+            border-radius: 30px;
+            opacity: 0.98;
+            font-family: 'Inter';
+
+        }
+        .btn{
+            width: 600px;
+            height: 100px;
+            /* background-color: #fda72f; */
+            /* background-color: black; */
+            position: absolute;
+            top: 43%;
+            left: 20%;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            /* flex-direction: column; */
+            /* justify-content: center; */
+            font-family: 'Inter';
+            /* opacity: 50%; */
+        }
+        .btn p{
+            /* font-size: 40px; */
+        }
+        img{
+            width: 100%;
+        }
+
+        h2{
+            font-size: 40px;
+            padding: 20px 0 0 0;
+        }
+        p{
+            padding: 10px 20px 0 ;
+            left: 0%;
+            font-size: 30px;
+        }
+        .text2{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 20px;
+            left: 50px;
+            /* opacity: 0.5; */
+        }
+        .text2 p{
+            font-size: 40px;
+            color: cornflowerblue;
+        }
+        .line{
+            padding: 40px 0 0 0;
+            border-bottom:  solid rgb(66, 66, 66) 1px;
+        }
+        .straight{
+            border-right: solid white 10px;
+            /* position: relative; */
+            width: 295px;
+            height: 90px;
+            /* background-color: #fff; */
+            border-right: rgb(87, 87, 87) 1px solid;
+
+        }
+        #p1{
+            /* border-right: rgb(87, 87, 87) solid 1px; */
+            font-family: 'Inter';
+            color: gray;
+        }
+
+        #p2{
+            color: red;
+            font-family: 'Inter';
+            font-weight: bold;
+        }
+        /* .display{
+            display: none;
+        } */
+        #pic{
+            display: none;
+        }
+        #p3{
+            color: white;
+            font-size: 50px;
+        }
+        #clock{
+            display: none;
+            position: absolute;
+            width: 73px;
+            height: 81px;
+            left: 270px;
+            bottom: 65px;
+        }
+        #pleasecount{
+            position: absolute;
+            width: 600px;
+            height: 40px;
+            left: 20%;
+            top: 35%;
+            /* background-color: #f9f; */
+            color: black;
+        }
+
+        #count{
+            position: absolute;
+            width: 350px;
+            height: 40px;
+            right: 30%;
+            top: 41%;
+            /* background-color: green; */
+            /* font-weight: bold; */
+        }
+
+        #yellow{
+            position: absolute;
+            width: 100vw;
+            height: 20px;
+            left: 0;
+            top: 0;
+            background-color: rgb(255, 192, 56);
+            /* background-color: red; */
+
+        }
+        .fries{
+            height: 100%;
+            width: 100%;
+            display: none;
+            position: absolute;
+            bottom: 0;
+            z-index: 100;
+            /* left: 35%;
+            top: 35%; */
+            /* left: 0;
+            top: 0; */
+            /* z-index: 100; */
+            /* background-color: #faa; */
+            /* opacity: 0.95; */
+            /* -webkit-transition:all 0.5s linear;
+            -moz-transition:all 0.5s linear;
+            -ms-transition:all 0.5s linear;
+            -o-transition:all 0.5s linear;
+            transition:all 0.5s linear; */
+            /* background-image: url("fries5.png");
+            background-size: cover; */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <p>jojoj</p>
+    <button id=butt>ppppp</button> -->
+
+    <div id="div3" style="width: 80px; height: 80px; display: none; background-color: #faf;"></div>
+    <div id="fries" class="fries">
+    <img src="fries5.png"   alt="">
+
+    </div>
+
+    <div id="yellow" class="yellow"></div>
+    <img id="bake1" src="new_fish36-1.png" alt="">
+    <img id="bake2" src="new_fish36-2.png" alt="">
+    <!-- <img id="fires" src="fries2.PNG" alt=""> -->
+
+    <div id="pic" class="pic">
+        <p>&nbsp</p>
+        <h2>確定兌換此優惠券？</h2>
+        <div class="text">
+            <!-- <p> &nbsp </p> -->
+            <p>請確認已在麥當勞櫃檯，點選「確定兌換」後需要在２分鐘內出示給櫃檯人員。</p>
+        </div>
+        <div class="line"></div>
+        <div class="straight"></div>
+        <div id="text2" class="text2">
+            <p id="p1">&nbsp &nbsp 取消  &nbsp &nbsp </p>
+            <p id="p2"> &nbsp &nbsp &nbsp &nbsp &nbsp 確定</p>
+        </div>
+
+        <!-- <img src="https://picsum.photos/828/1792?random=12" alt=""> -->
+        <!-- <img src="burger.JPG" alt=""> -->
+    </div>
+    <div id="pleasecount" class="pleasecount">
+        <!-- <p>YYY</p> -->
+    </div>
+
+    <div id="count" class="count">
+        <!-- <p>aaa</p> -->
+
+    </div>
+
+    <div id="btn" class="btn">
+        <!-- <img src="clock.png" alt=""> -->
+        <!-- <p id="p3">兌換優惠</p> -->
+    </div>
+
+    <img id="clock" src="clock.png" alt="">
+    <script>
+        // document.ontouchmove= function(e){
+        //     e.preventDefault();
+        // }
+        var mo=function(e){e.preventDefault();};
+function stop(){
+        document.body.style.overflow='hidden';
+        document.addEventListener("touchmove",mo,{passive:false});//禁止页面滑动
+}
+//直接默认不让滑动
+stop();
+
+var btn = document.getElementById('btn');
+var pic = document.getElementById('pic');
+var text2 = document.getElementById('text2');
+var p2 = document.getElementById('p2');
+var clock = document.getElementById('clock');
+var bake1 = document.getElementById('bake1');
+var time = 60;
+var count = document.getElementById('count');
+var pleasecount = document.getElementById('pleasecount');
+var fries = document.getElementById('fires');
+
+    btn.onclick = showYou;
+    function showYou(){
+        pic.style.display='block';
+        btn.style.display='none';
+        // bake1.style.display='none';
+    }
+
+    // p2.onclick = changeBGC;
+    // function changeBGC() {
+    //     bake1.style.display='none';
+
+    // }
+
+    p2.onclick = showCountDown;
+    function showCountDown(){
+        bake1.style.display='none';
+        pic.style.display='none';
+        // fries.style.display='flex';
+        var AAA = setInterval(function(){
+        // btn.style.height = '220px';
+        btn.style.fontFamily= 'Inter';
+        count.style.fontFamily= 'Inter';
+        pleasecount.style.fontFamily= 'Inter';
+
+        var TTT = time - 1
+        count.innerHTML = "<font size= 6px color=red>  &nbsp 使用期限倒數 1:" + (time = TTT);
+        pleasecount.innerHTML = "<font size= 6px color=black>  請於倒數 1:" + (time = TTT) + "內出示給櫃檯人員進行兌換";
+        fries.style.display='none';
+        // btn.innerHTML = "background-color=white";
+        // clock.style.display='block';
+        // console.log(time = time - 1);
+        }, 1000);
+
+        // btn.innerHTML = "<font size = 30px>  優惠倒數 1:  </font>" + AAA;
+    }
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
